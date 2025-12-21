@@ -125,8 +125,10 @@ h6 {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: #2e2f42;
+        color: #404bbf;
         text-decoration: none;
+        padding: 24px 0;
+        display: block;
 }
 
 .header-link-studio:hover, 
@@ -187,8 +189,10 @@ h6 {
 
 .hero {
     padding: 188px 0;
-    text-align: center;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .solutions {
@@ -205,7 +209,7 @@ box-sizing: border-box;
         letter-spacing: 0.02em;
         text-align: center;
         color: #fff;
-        margin: auto;
+        margin: 0 auto 48px;
         max-width: 496px;
         align-items: center;
         padding-bottom: 48px;
@@ -302,11 +306,9 @@ box-sizing: border-box;
 /*----TEAM-----*/
 
 .team { 
-    border: 1px solid #000;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background-color: #f4f4fd;
-    
 }
+
 
 .team-title {
     font-family: "Roboto",
@@ -317,12 +319,23 @@ box-sizing: border-box;
         letter-spacing: 0.02em;
         text-align: center;
         color: #2e2f42;
+        position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
 }
 
 .team-list { 
     display: flex;
     gap: 24px;
     list-style-type: none;
+    justify-content: space-between;
 
 }
 
@@ -330,8 +343,11 @@ box-sizing: border-box;
 .team-item { 
     
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    background: #fff
+    background: #fff;
+    border-radius: 4px;
+    flex-direction: column;
     
+
 
 }
 
@@ -341,7 +357,7 @@ box-sizing: border-box;
 }
 .team-img {
     padding-bottom: 32px;
-    gap: 32px;
+    display: block;
     flex-shrink: 0;
 
 }
@@ -385,69 +401,100 @@ font-family: "Roboto",
 
 /*------PORTFOLIO-----*/
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .portfolio {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 0 15px;
 }
 
 .portfolio-title {
     font-weight: 700;
-        font-size: 36px;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #2e2f42;
-        margin-bottom: 60px;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 60px;
 }
 
 .portfolio-list {
-    display: flex; 
-    gap: 60px 24px;
+    display: flex;
     flex-wrap: wrap;
-    list-style-type: none;
-    align-items: center;
+    gap: 48px 24px;
+    justify-content: center;
+    width: 100%;
+}
+.portfolio-item {
+    flex: 1 1 calc((100% - 48px) / 3);
+    max-width: 360px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+
     
 }
 
-.portfolio-item {
-    
-    width: calc((100% - 48px) / 3);  
-    
+
+.portfolio-item:hover {
+    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
+        0 1px 1px rgba(46, 47, 66, 0.16),
+        0 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-img {
-    margin-bottom: 32px;
+    display: block;
+    width: 100%;
+    height: auto;
+   
 
 }
 
-.cotainer-portfolio {
-    border: 1px solid #e7e9fc;
-        background-color: #fff;
+.container-portfolio {
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+    padding: 32px; 
+    max-width: 360px;
+    display: block;
+        
  
 }
 .portfolio-subtitle {
     font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
-        padding-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin: 16px;
 
 }
 
 .portfolio-text {
     font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    margin: 0 16px 16px 16px;
 }
 
 
 /*----FOOTER-----*/
 
 .footer-container {
-    display: inline-block;
+    
     padding: 100px 0;
+    
 }
 
 
