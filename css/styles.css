@@ -376,7 +376,8 @@ h6 {
 .container-team {
     padding: 32px 16px;
     max-width: 232px;
-    align-items: center;   
+    align-items: center;
+    margin: 0 auto;   
 }
 
 .team-subtitle {
